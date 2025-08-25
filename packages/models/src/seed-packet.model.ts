@@ -1,4 +1,5 @@
 /**
+ * @public
  * Plant and Seed Packet Data Model
  *
  * This file defines the complete data structure for representing plants, seeds, and their
@@ -32,6 +33,9 @@ enum TemperatureUnit {
 
 type RawDistanceUnit = 'inches' | 'feet' | 'yards' | 'meters' | 'centimeters'
 
+/**
+ * @beta
+ */
 export interface Distance {
 	value: number
 	unit: RawDistanceUnit
@@ -324,7 +328,7 @@ enum DrainagePreference {
 
 /**
  * Soil acidity/alkalinity affects nutrient availability to plants
- * pH scale: 0-14, where 7 is neutral, <7 is acidic, >7 is alkaline
+ * pH scale: 0-14, where 7 is neutral, greater 7 is acidic, less than 7 is alkaline
  */
 enum PhPreference {
 	acidic = 'acidic', // pH 5.5-6.5 (blueberries, azaleas)
@@ -581,6 +585,7 @@ interface CompanionPlanting {
 
 /**
  * Information specific to seed packets (not live plants)
+ * @beta
  */
 export interface SeedPacketInfo {
 	seedCount?: number // Number of seeds in packet
