@@ -29,8 +29,7 @@
 	"scripts": {
 		"build": "vite build",
 		"check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
-		"dev": "concurrently -n \"Server,Client\" -c \"yellow,blue\" \"pnpm run dev-server\" \"pnpm run dev-client\"",
-		"dev-client": "vite",
+		"dev": "vite",
 		"dev-server": "tsx --watch --watch-preserve-output src/server/index.ts",
 		"format": "prettier --write src/**/*.{ts,svelte} tests/**/*.ts {tailwind.config.js,postcss.config.cjs,vite.config.ts,svelte.config.js,eslint.config.mts}",
 		"lint": "eslint .",
